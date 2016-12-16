@@ -1,5 +1,5 @@
 # iAngel
-**Version:1.0.0**
+**Version:1.0.1**
 
 Control the angularJS by typescript. Such as the typescript class DemoController will be compile into a angularJS's controller. 
 ## About catalog

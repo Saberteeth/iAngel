@@ -30,7 +30,7 @@ Control the angularJS by typescript. Such as the typescript class DemoController
 			}
 		}
 
-		var angel = new iAngel.Angel('demo',[],[test]);
+		var angel = new iAngel.Angel('demo',['ngRoute',test]);
 		new test.DemoController(angel);
 		new Demo2Controller(angel);
 

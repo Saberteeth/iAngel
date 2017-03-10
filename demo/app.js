@@ -1,5 +1,1 @@
-var angular;
-var model = angular.module('demo', []);
-new TeacherController(model);
-new FirstController(model);
-new TeachService(model);
+var __extends=this&&this.__extends||function(){var t=Object.setPrototypeOf||{__proto__:[]}instanceof Array&&function(t,n){t.__proto__=n}||function(t,n){for(var e in n)n.hasOwnProperty(e)&&(t[e]=n[e])};return function(n,e){function o(){this.constructor=n}t(n,e),n.prototype=null===e?Object.create(e):(o.prototype=e.prototype,new o)}}(),test;!function(t){var n=function(t){function n(){return null!==t&&t.apply(this,arguments)||this}return __extends(n,t),n.prototype.getParams=function(){return null},n.prototype.onCreate=function(t){t.test="Hello iAngel"},n}(iAngel.Controller);t.DemoController=n}(test||(test={}));var Demo2Controller=function(t){function n(){return null!==t&&t.apply(this,arguments)||this}return __extends(n,t),n.prototype.getParams=function(){return null},n.prototype.onCreate=function(t){t.test="Hello iAngel2"},n}(iAngel.Controller),angel=new iAngel.Angel("demo",[],[test]);new test.DemoController(angel),new Demo2Controller(angel);

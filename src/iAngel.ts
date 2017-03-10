@@ -2,7 +2,7 @@
 module iAngel {
     export class Utils {
         public static getClassName(clazz,modules): string {
-
+          
            for(var i=0;i<modules.length;i++){
                for(var name in modules[i]){
                     if(modules[i][name] == clazz){
@@ -138,10 +138,24 @@ module iAngel {
         get typeModules():Array<Object>{
             return this._typeModules
         }
-
-        constructor(name:string,dep:Array<string>,typeModules:Array<Object>){
-            this._module = angular.module(name,dep)
-            this._typeModules = typeModules
+        /**
+         * 
+         * @param name angularJS's module name
+         * @param dep angularJS and typeScript dependencies 
+         */
+        constructor(name:string,dep:Array<any>){
+            var strs = [];
+            var objs = [];
+            for(var value in dep){
+                if(typeof dep[value] =='string'){
+                    strs.push(dep[value]);
+                }else if(typeof dep[value] =='object'){
+                    objs.push(dep[value]);
+                }
+            }
+          
+            this._module = angular.module(name,strs)
+            this._typeModules = objs
         }
       
     }

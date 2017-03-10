@@ -19,7 +19,7 @@ class Demo2Controller extends iAngel.Controller<any>{
         }
 }
 
-var angel = new iAngel.Angel('demo',[],[test]);
+var angel = new iAngel.Angel('demo',['ngRoute',test]);
 new test.DemoController(angel);
 new Demo2Controller(angel);
 

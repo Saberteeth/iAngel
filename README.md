@@ -1,5 +1,5 @@
 # iAngel
-**Version:1.0.1**
+**Version:1.1.1**
 
 Control the angularJS by typescript. Such as the typescript class DemoController will be compile into a angularJS's controller. 
 ## About catalog
@@ -10,17 +10,28 @@ Control the angularJS by typescript. Such as the typescript class DemoController
 ## Simple Example
 - Use iAngel create a angularJS controller.
 		
-		class DemoController extends iAngel.Controller<any>{
-			getParams():Array<string>{
-				//if u don't have params u can return [] or null.
-				return ['#scope']
+		module test{
+		    export class DemoController extends iAngel.Controller<any>{
+			getParams(): Array<string> {
+			    return null;
 			}
-			onCreate(thas,$scope){
-				//thas is controller, $scope correspond getParams().
+			onCreate(thas){
+			    thas.test = 'Hello iAngel'
+			}
+		    }
+		}
+
+		class Demo2Controller extends iAngel.Controller<any>{
+			getParams(): Array<string> {
+			    return null;
+			}
+			onCreate(thas){
+			    thas.test = 'Hello iAngel2'
 			}
 		}
 
-		var model = angular.modeule('demo',[]);
-		new DemoController(model);
+		var angel = new iAngel.Angel('demo',[],[test]);
+		new test.DemoController(angel);
+		new Demo2Controller(angel);
 
 iAngel has not only these. Such as Service, Directive and Config.
